@@ -4,55 +4,51 @@ B.	mostrar la cantidad de alambre a comprar  si se ingresara el radio  de un ter
 C.	Para hacer un contrapiso de 1m x 1m se necesitan 2 bolsas de cemento y 3 de cal, debemos mostrar cuantas bolsas se necesitan de cada uno para las medidas que nos ingresen.
 */
 
-function Rectangulo () 
-{
-let largo;
-let ancho;
-let perimetro;
-let totalalambre;
+function Rectangulo() {
+    let largo;
+    let ancho;
+    let perimetro;
+    let totalAlambre;
 
-largo = parseFloat(txtIdLargo.value);
-ancho = parseFloat(txtIdAncho.value);
+    largo = parseFloat(txtIdLargo.value);
+    ancho = parseFloat(txtIdAncho.value);
 
-perimetro = (largo + ancho) * 2;
-totalalambre = perimetro * 3;
+    perimetro = (largo + ancho) * 2;
+    totalAlambre = perimetro * 3;
 
-alert("Debe comprar " + totalalambre + " metros de alambre");
+    alert("Se debe comprar " + totalAlambre.toFixed(2) + " metros de alambre");
 
 }
-function Circulo () 
-{
-	let radio;
+function Circulo() {
+    let radio;
     let diametro;
     let circunferencia;
     let alambre;
 
     radio = parseFloat(txtIdRadio.value);
+
     diametro = radio * 2;
-    circunferencia = diametro * 3.14;
+    circunferencia = diametro * Math.PI;
     alambre = circunferencia * 3;
 
-    alert ("Debe comprar " + alambre + " metros de alambre");
+    alert("Se debe comprar " + alambre.toFixed(2) + " metros de alambre");
 }
-function Materiales () 
-{
-let largo;
-let ancho;
-let superficie;
-let bolsadecemento;
-let bolsadecal;
-let totalbolsacemento;
-let totalbolsacal;
+function Materiales() {
+    let largo;
+    let ancho;
+    let superficie;
+    let bolsaDeCemento;
+    let bolsaDeCal;
 
-largo = parseFloat(txtIdLargo.value);
-ancho = parseFloat(txtIdAncho.value);
+    largo = parseFloat(txtIdLargo.value);
+    ancho = parseFloat(txtIdAncho.value);
 
-bolsadecemento = 2;
-bolsadecal = 3;
+    bolsaDeCemento = 2;
+    bolsaDeCal = 3;
 
-superficie = largo * ancho;
-totalbolsacal = bolsadecal * superficie;
-totalbolsacemento = bolsadecemento * superficie;
+    superficie = largo * ancho;
+    bolsaDeCal = bolsaDeCal * superficie;
+    bolsaDeCemento = bolsaDeCemento * superficie;
 
-alert("Se debe comprar " + totalbolsacemento + " bolsas de cemento" + " y" + totalbolsacal + " de cal");
+    alert("Se debe comprar " + bolsaDeCemento.toFixed(1) + " bolsas de cemento" + " y " + bolsaDeCal.toFixed(1) + " de cal");
 }

@@ -1,6 +1,14 @@
-function mostrar()
-{
+function mostrar() {
 	//tomo la edad  
-	alert("ok");
+	let edad;
+
+	edad = parseFloat(txtIdEdad.value);
+
+	if (edad == 15) {
+
+		alert("Niña bonita");
+	}
+
+
 
 }//FIN DE LA FUNCIÓN
